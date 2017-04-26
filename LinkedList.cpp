@@ -10,7 +10,7 @@ Node *head = NULL;
 
 void printList(struct Node *n){
 	while(n != NULL){
-		cout <<  n->data << "  ";
+		cout <<  n->data << " - ";
 		n = n->next;
 	}
 	cout << endl;
@@ -22,6 +22,15 @@ void Insert(int data, int position){
 		head->data = data;
 		head->next = NULL;
 	}
+
+	Node *temp = head;
+
+	for(int i = 0; i < position; i++){
+		temp = temp->next;
+	}
+
+	temp->data = data;
+	temp->next = NULL;
 }
 
 void InsertHead(int data){
@@ -33,14 +42,9 @@ void InsertHead(int data){
 
 int main(){
 	int n, data;
+	cin >> data;
 	cin >> n;
-
-	for(int i = 0; i < n; i++){
-		cout << "Enter the number : ";
-		cin >> data;
-		InsertHead(data);
-		printList(head);
-	}
+	Insert(data, n);
 
 	return 0;
 }
