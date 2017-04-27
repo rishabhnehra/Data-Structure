@@ -33,6 +33,20 @@ void Insert(int data, int position){
 	temp->next = NULL;
 }
 
+void insertAfter(struct node* prev_node, int new_data)//Still needs working
+{
+    if (prev_node == NULL)
+    {
+      printf("the given previous node cannot be NULL");
+      return;
+    }
+    struct node* new_node =(struct node*) malloc(sizeof(struct node));
+    new_node->data  = new_data;
+    new_node->next = prev_node->next;
+    prev_node->next = new_node;
+}
+
+
 void InsertHead(int data){
 	Node *temp = new Node();
 	temp->data = data;
