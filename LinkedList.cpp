@@ -65,7 +65,7 @@ class LinkedList
 
 	int getPosition(int value){
 		Node *current = head;
-		int counter = 1;
+		int counter = 0;
 		while(current->value != value){
 			current = current->next;
 			counter++;
