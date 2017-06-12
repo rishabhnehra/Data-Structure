@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 class Node {
@@ -72,6 +72,10 @@ class LinkedList
 		}
 		return counter;
 	}
+
+	void reverse(){
+		Node *temp, 
+	}
 };
 
 int main(){
@@ -86,5 +90,6 @@ int main(){
 	ll.deleteNode(3);
 	ll.printList();	
 	cout << ll.getPosition(5);
+	
 	return 0;
 }
