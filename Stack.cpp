@@ -9,7 +9,7 @@ class Stack{
 		top = -1;
 	}
 	bool push(int x){
-		if (top <= 100 ){
+		if (top <= 10 ){
 			a[++top] = x;
 			return true;
 		}
@@ -20,7 +20,7 @@ class Stack{
 	}
 
 	int pop(){
-		if (top <= -1){
+		if (top < 0){
 			cout << "Stack Underflow" << endl;
 			return 0;
 		}

@@ -73,9 +73,9 @@ class LinkedList
 		return counter;
 	}
 
-	void reverse(){
-		Node *temp, 
-	}
+	// void reverse(){
+	// 	Node *temp,
+	// }
 };
 
 int main(){
@@ -88,8 +88,8 @@ int main(){
 	ll.printList();
 	ll.printHead();
 	ll.deleteNode(3);
-	ll.printList();	
+	ll.printList();
 	cout << ll.getPosition(5);
-	
+
 	return 0;
 }
