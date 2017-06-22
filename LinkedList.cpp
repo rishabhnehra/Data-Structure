@@ -5,6 +5,9 @@ class Node {
 	public:
 		int value;
 		Node *next;
+		Node(){
+			value = 0;
+		}
 };
 
 class LinkedList
@@ -79,17 +82,17 @@ class LinkedList
 };
 
 int main(){
-	LinkedList ll;
-	ll.append(1);
-	ll.append(2);
-	ll.append(3);
-	ll.append(4);
-	ll.append(5);
-	ll.printList();
-	ll.printHead();
-	ll.deleteNode(3);
-	ll.printList();
-	cout << ll.getPosition(5);
+	LinkedList *ll = new LinkedList();
+	ll->append(1);
+	ll->append(2);
+	ll->append(3);
+	ll->append(4);
+	ll->append(5);
+	ll->printList();
+	ll->printHead();
+	ll->deleteNode(3);
+	ll->printList();
+	cout << ll->getPosition(5);
 
 	return 0;
 }
